@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique — commandes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Boutique</h1>
+
+  <h2>Produits</h2>
+  <table>
+    <thead><tr><th>#</th><th>Produit</th><th>Stock</th></tr></thead>
+    <tbody id="products"></tbody>
+  </table>
+
+  <h2>Nouvelle commande</h2>
+  <form id="order-form">
+    <label>Client <select id="user"></select></label>
+    <label>Produit <select id="product"></select></label>
+    <label>Quantité <input id="quantity" type="number" min="1" value="1"></label>
+    <button type="submit">Commander</button>
+  </form>
+  <p id="message" role="status"></p>
+
+  <h2>Commandes</h2>
+  <table>
+    <thead><tr><th>#</th><th>Client</th><th>Produit</th><th>Qté</th><th>Statut</th><th>Actions</th></tr></thead>
+    <tbody id="orders"></tbody>
+  </table>
+
+  <script src="/common.js"></script>
+  <script src="/shop.js"></script>
+</body>
+</html>

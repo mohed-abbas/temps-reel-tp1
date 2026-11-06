@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suivi de commande</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <p><a href="/">← Boutique</a></p>
+  <h1 id="title">Suivi de commande</h1>
+
+  <form id="search" hidden>
+    <label>Numéro de commande <input name="id" type="number" min="1" required></label>
+    <button type="submit">Suivre</button>
+  </form>
+
+  <div id="details" hidden>
+    <p>Produit : <strong id="product"></strong> × <span id="quantity"></span></p>
+    <p>Passée le : <span id="created"></span></p>
+    <p>Statut : <span id="status" aria-live="polite"></span></p>
+
+    <h2>Événements reçus</h2>
+    <ul id="log"></ul>
+  </div>
+
+  <p id="error" class="error"></p>
+
+  <script src="/common.js"></script>
+  <script src="/order.js"></script>
+</body>
+</html>

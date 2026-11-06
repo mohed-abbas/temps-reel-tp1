@@ -1,0 +1,56 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #222;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.preparing { background: #fff3cd; }
+.shipped { background: #cfe2ff; }
+.delivered { background: #d1e7dd; }
+.cancelled { background: #f8d7da; }
+
+.error { color: #b00020; }
+
+#log {
+  font-family: monospace;
+  font-size: 0.85rem;
+  padding-left: 1rem;
+}
