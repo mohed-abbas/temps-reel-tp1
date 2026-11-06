@@ -18,6 +18,8 @@ export function subscribe(res: Response, orderId: number | null): void {
     "Cache-Control": "no-cache",
     Connection: "keep-alive",
   });
+  // Le navigateur attendra 5 s avant chaque tentative de reconnexion
+  res.write("retry: 5000\n\n");
 
   const subscriber: Subscriber = { res, orderId };
   subscribers.add(subscriber);
